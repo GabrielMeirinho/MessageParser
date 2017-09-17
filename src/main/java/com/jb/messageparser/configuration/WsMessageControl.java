@@ -1,4 +1,6 @@
 package com.jb.messageparser.configuration;
+import java.io.IOException;
+import java.net.ServerSocket;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,7 +17,7 @@ public class WsMessageControl{
 	private static final int pausePeriod   = 50;
 	private int 			 serviceCounter= 0;
 
-	public void serviceCounterIntegration(){
+	public void serviceCounterIntegration() {
 		this.serviceCounter++;
 		if (serviceCounter%messagePeriod == 0){
 			System.out.println("Total of " + serviceCounter +" messages, printing log.");

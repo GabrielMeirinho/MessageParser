@@ -14,7 +14,7 @@ public class AspectsConfiguration {
 	@Autowired
 	WsMessageControl		wsMessageControl;
 	
-	@After("execution(* com.jb.messageparser.service.MessageParserService.parseMessage(..))")
+	@After("execution(* com.jb.messageparser.service.MessageParserService.parseSaleMessage(..))")
 	public void trackParseMessage(JoinPoint joinPoint){
 		wsMessageControl.serviceCounterIntegration();
 	}
