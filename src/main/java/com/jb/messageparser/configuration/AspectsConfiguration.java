@@ -15,7 +15,7 @@ public class AspectsConfiguration {
 	WsMessageControl		wsMessageControl;
 	
 	@After("execution(* com.jb.messageparser.service.MessageParserService.parseSaleMessage(..))")
-	public void trackParseMessage(JoinPoint joinPoint){
+	public void trackParseMessage(JoinPoint joinPoint) throws InterruptedException{
 		wsMessageControl.serviceCounterIntegration();
 	}
 	

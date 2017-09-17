@@ -1,8 +1,4 @@
 package com.jb.messageparser.controller;
-
-
-import java.net.ServerSocket;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
